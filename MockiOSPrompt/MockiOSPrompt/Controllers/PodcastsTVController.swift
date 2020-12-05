@@ -14,9 +14,7 @@ class PodcastsTVController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var apiClient = APIClient()
-    
     var searchString = ""
-    
     var podcasts = [Podcast]() {
         didSet {
             DispatchQueue.main.async {
@@ -46,6 +44,14 @@ class PodcastsTVController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            
+            guard let detailVC = segue.destination as? PodcastDetailController, let indexPath = tableView.indexPathForSelectedRow else {
+                fatalError("could not load")
+            }
+            detailVC.podcast = podcasts[indexPath.row]
+        }
 
 }
 
@@ -66,6 +72,11 @@ extension PodcastsTVController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let detailVC = PodcastDetailController()
+//        navigationController?.pushViewController(detailVC, animated: true)
+//    }
     
 }
 
