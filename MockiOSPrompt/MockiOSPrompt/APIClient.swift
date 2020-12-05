@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 struct APIClient {
     
@@ -79,4 +80,19 @@ struct APIClient {
         }
         dataTask.resume()
     }
+    
+    public func searchForPodcasts(for query: String) -> AnyPublisher<[Podcast],Error> {
+            
+            let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "paris"
+            let endpoint = "https://itunes.apple.com/search?media=podcast&limit=200&term=\(query)"
+            
+            let url = URL(string: endpoint)!
+            
+            return URLSession.shared.dataTaskPublisher(for: url)
+                .map(\.data)
+                .decode(type: SearchResults.self, decoder: JSONDecoder())
+                .map { $0.results }
+                .receive(on: DispatchQueue.main)
+                .eraseToAnyPublisher()
+        }
 }

@@ -99,4 +99,15 @@ class CustomCell: UICollectionViewCell {
             imageView.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
+    
+    public func configCell(_ podcast: Podcast) {
+
+        guard let imageURL = URL(string: podcast.artworkUrl100 ?? ""), let data = try? Data(contentsOf: imageURL) else {
+            return
+        }
+        
+        let image = UIImage(data: data)
+        
+        imageView.image = image
+    }
 }
