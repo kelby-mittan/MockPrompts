@@ -31,4 +31,11 @@ class PodcastDetailController: UIViewController {
         podcastImageView.image = image
         titleLabel.text = podcast?.collectionName
     }
+    
+    @IBAction func goToCVVC(_ sender: UIButton) {
+        
+        let cvVC = CVViewController()
+        navigationController?.pushViewController(cvVC, animated: true)
+    }
+    
 }

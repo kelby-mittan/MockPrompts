@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0261B168257AA3F300610486 /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261B167257AA3F300610486 /* PodcastCell.swift */; };
 		0261B170257ACB9D00610486 /* PodcastDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261B16F257ACB9D00610486 /* PodcastDetailController.swift */; };
+		0261B179257B13CD00610486 /* CVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261B178257B13CD00610486 /* CVView.swift */; };
+		0261B181257B163E00610486 /* CVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261B180257B163E00610486 /* CVViewController.swift */; };
 		02FF1CDD2579690A00A944D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF1CDC2579690A00A944D4 /* AppDelegate.swift */; };
 		02FF1CDF2579690A00A944D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF1CDE2579690A00A944D4 /* SceneDelegate.swift */; };
 		02FF1CE12579690A00A944D4 /* PodcastsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF1CE02579690A00A944D4 /* PodcastsTVController.swift */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		0261B167257AA3F300610486 /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
 		0261B16F257ACB9D00610486 /* PodcastDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDetailController.swift; sourceTree = "<group>"; };
+		0261B178257B13CD00610486 /* CVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVView.swift; sourceTree = "<group>"; };
+		0261B180257B163E00610486 /* CVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewController.swift; sourceTree = "<group>"; };
 		02FF1CD92579690A00A944D4 /* MockiOSPrompt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockiOSPrompt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FF1CDC2579690A00A944D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02FF1CDE2579690A00A944D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,8 +93,18 @@
 			children = (
 				02FF1CE02579690A00A944D4 /* PodcastsTVController.swift */,
 				0261B16F257ACB9D00610486 /* PodcastDetailController.swift */,
+				0261B178257B13CD00610486 /* CVView.swift */,
+				0261B180257B163E00610486 /* CVViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0261B177257B131C00610486 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0261B167257AA3F300610486 /* PodcastCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		02FF1CD02579690900A944D4 = {
@@ -120,7 +134,7 @@
 				02FF1CDE2579690A00A944D4 /* SceneDelegate.swift */,
 				0261B176257B055B00610486 /* Controllers */,
 				02FF1D0F25796F5D00A944D4 /* Podcast.swift */,
-				0261B167257AA3F300610486 /* PodcastCell.swift */,
+				0261B177257B131C00610486 /* Cells */,
 				02FF1D142579703D00A944D4 /* APIClient.swift */,
 				02FF1CE22579690A00A944D4 /* Main.storyboard */,
 				02FF1CE52579691100A944D4 /* Assets.xcassets */,
@@ -279,8 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				02FF1CE12579690A00A944D4 /* PodcastsTVController.swift in Sources */,
+				0261B181257B163E00610486 /* CVViewController.swift in Sources */,
 				0261B170257ACB9D00610486 /* PodcastDetailController.swift in Sources */,
 				02FF1CDD2579690A00A944D4 /* AppDelegate.swift in Sources */,
+				0261B179257B13CD00610486 /* CVView.swift in Sources */,
 				02FF1D1025796F5D00A944D4 /* Podcast.swift in Sources */,
 				02FF1D152579703D00A944D4 /* APIClient.swift in Sources */,
 				0261B168257AA3F300610486 /* PodcastCell.swift in Sources */,

@@ -117,6 +117,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8Y-p4-iy8">
                                 <rect key="frame" x="184" y="463" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToCVVC:" destination="vvj-Mq-mtD" eventType="touchUpInside" id="PvC-j4-euG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="btD-D0-K0W"/>
