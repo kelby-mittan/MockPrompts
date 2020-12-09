@@ -46,12 +46,12 @@ class PodcastsTVController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            
-            guard let detailVC = segue.destination as? PodcastDetailController, let indexPath = tableView.indexPathForSelectedRow else {
-                fatalError("could not load")
-            }
-            detailVC.podcast = podcasts[indexPath.row]
+        
+        guard let detailVC = segue.destination as? PodcastDetailController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("could not load")
         }
+        detailVC.podcast = podcasts[indexPath.row]
+    }
 
 }
 

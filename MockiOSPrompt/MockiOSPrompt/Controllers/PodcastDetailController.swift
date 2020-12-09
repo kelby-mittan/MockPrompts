@@ -38,4 +38,12 @@ class PodcastDetailController: UIViewController {
         navigationController?.pushViewController(cvVC, animated: true)
     }
     
+    @IBAction func diButton(_ sender: UIButton) {
+        guard let pCast = podcast, let vc = storyboard?.instantiateViewController(identifier: "DIVC", creator: { (coder) -> DIViewController? in
+            return DIViewController(coder: coder, podcast: pCast)
+        }) else {
+            fatalError()
+        }
+        navigationController?.present(vc, animated: true)
+    }
 }
